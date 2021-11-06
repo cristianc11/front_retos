@@ -1,7 +1,7 @@
 function autoInicioInformacionReservation(){
     console.log("Se está ejecutando los datos de la tabla");
     $.ajax({
-        url:"http://129.151.102.93:8080/api/Reservation/all",
+        url:"http://localhost:8080/api/Reservation/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -13,7 +13,7 @@ function autoInicioInformacionReservation(){
 
 function traerLlaveReservation(){
     $.ajax({
-        url:"http://129.151.102.93:8080/api/Reservation/all",
+        url:"http://localhost:8080/api/Reservation/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -74,7 +74,7 @@ function guardarInformacionReservation(){
         datatype: 'JSON',
         data:JSON.stringify(myData),
 
-        url:"http://129.151.102.93:8080/api/Reservation/save",
+        url:"http://localhost:8080/api/Reservation/save",
 
         success:function(respuesta){
             console.log(respuesta)
@@ -99,7 +99,7 @@ function actualizarInformacionReservation(idElemento){
     };
     console.log(myData);
     $.ajax({
-        url:"http://129.151.102.93:8080/api/Reservation/update",
+        url:"http://localhost:8080/api/Reservation/update",
         type:"PUT",
         data:JSON.stringify(myData),
         contentType:"application/json; charset=utf-8",
@@ -128,7 +128,7 @@ function borrarInformacionReservation(idElemento){
         idReservation:idElemento,
     };
     $.ajax({
-        url:"http://129.151.102.93:8080/api/Reservation/"+idElemento,
+        url:"http://localhost:8080/api/Reservation/"+idElemento,
         type:"DELETE",
         data:JSON.stringify(myData),
         contentType:"application/json; charset=utf-8",

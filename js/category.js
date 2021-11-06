@@ -1,7 +1,7 @@
 function autoInicioInformacionCategory(){
     console.log("Se está ejecutando los datos de la tabla");
     $.ajax({
-        url:"http://129.151.102.93:8080/api/Category/all",
+        url:"http://localhost:8080/api/Category/all",
         type:"GET",
         datatype:"JSON",
         success:function accion(respuesta){
@@ -13,7 +13,7 @@ function autoInicioInformacionCategory(){
 
 function traerLlaveCategory(){
     $.ajax({
-        url:"http://129.151.102.93:8080/api/Category/all",
+        url:"http://localhost:8080/api/Category/all",
         type:"GET",
         datatype:"JSON",
         success:function accion(respuesta){
@@ -58,7 +58,7 @@ function guardarInformacionCategory(){
         datatype: 'JSON',
         data:JSON.stringify(myData),
 
-        url:"http://129.151.102.93:8080/api/Category/save",
+        url:"http://localhost:8080/api/Category/save",
 
         success:function(respuesta){
             console.log(respuesta)
@@ -82,7 +82,7 @@ function actualizarInformacionCategory(idElemento){
     };
     console.log(myData);
     $.ajax({
-        url:"http://129.151.102.93:8080/api/Category/update",
+        url:"http://localhost:8080/api/Category/update",
         type:"PUT",
         data:JSON.stringify(myData),
         contentType:"application/json; charset=utf-8",
@@ -108,7 +108,7 @@ function borrarInformacionCategory(idElemento){
         id:idElemento,
     };
     $.ajax({
-        url:"http://129.151.102.93:8080/api/Category/"+idElemento,
+        url:"http://localhost:8080/api/Category/"+idElemento,
         type:"DELETE",
         data:JSON.stringify(myData),
         contentType:"application/json; charset=utf-8",

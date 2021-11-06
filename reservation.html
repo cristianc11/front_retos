@@ -7,8 +7,8 @@
     <title>Reservaciones</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-    <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
-    <link href="css/reservation.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/estilos.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/reservation.css" rel="stylesheet" type="text/css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/reservation.js"></script>
     <script type="text/javascript" src="js/quadbike.js"></script>
@@ -17,7 +17,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #a3caf1">
         <div class="container-fluid">
-            <a><img id="logo" src="img/logo.png" alt="logo"></a>
+            <a><img id="logo" src="/img/logo.png" alt="logo"></a>
             <a href="#" class="navbar-brand"><b>4XBike</b></a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -38,6 +38,7 @@
         <div class="p-5 my-4 bg-light rounded-3">
             <h1>Consultar Reservaciones</h1>
             <p class="lead">
+                <a href="reports.html" class="btn btn-success">Ir a Reportes</a>
                 <table id="tabla" class="table"></table>
                 <script type="text/javascript">
                 window.onload = autoInicioInformacionReservation();
@@ -86,9 +87,8 @@
             <div class="col-4 mb-3">
                 <label class="form-label">Status</label>
                 <select class="form-select" id="select-status">
-                    <option>Programado</option>
-                    <option>Cancelado</option>
-                    <option>Realizado</option>
+                    <option>completed</option>
+                    <option>cancelled</option>
                 </select>
             </div>
         </form>

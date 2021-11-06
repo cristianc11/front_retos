@@ -1,7 +1,7 @@
 function autoInicioInformacionQuadbike(){
     console.log("Se está ejecutando los datos de la tabla");
     $.ajax({
-        url:"http://129.151.102.93:8080/api/Quadbike/all",
+        url:"http://localhost:8080/api/Quadbike/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -13,7 +13,7 @@ function autoInicioInformacionQuadbike(){
 
 function traerLlaveQuadbike(){
     $.ajax({
-        url:"http://129.151.102.93:8080/api/Quadbike/all",
+        url:"http://localhost:8080/api/Quadbike/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -67,7 +67,7 @@ function guardarInformacionQuadbike(){
         datatype: 'JSON',
         data:JSON.stringify(myData),
 
-        url:"http://129.151.102.93:8080/api/Quadbike/save",
+        url:"http://localhost:8080/api/Quadbike/save",
 
         success:function(respuesta){
             console.log(respuesta)
@@ -93,7 +93,7 @@ function actualizarInformacionQuadbike(idElemento){
     };
     console.log(myData);
     $.ajax({
-        url:"http://129.151.102.93:8080/api/Quadbike/update",
+        url:"http://localhost:8080/api/Quadbike/update",
         type:"PUT",
         data:JSON.stringify(myData),
         contentType:"application/json; charset=utf-8",
@@ -124,7 +124,7 @@ function borrarInformacionQuadbike(idElemento){
         id:idElemento,
     };
     $.ajax({
-        url:"http://129.151.102.93:8080/api/Quadbike/"+idElemento,
+        url:"http://localhost:8080/api/Quadbike/"+idElemento,
         type:"DELETE",
         data:JSON.stringify(myData),
         contentType:"application/json; charset=utf-8",

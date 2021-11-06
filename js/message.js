@@ -1,7 +1,7 @@
 function autoInicioInformacionMessage(){
     console.log("Se está ejecutando los datos de la tabla");
     $.ajax({
-        url:"http://129.151.102.93:8080/api/Message/all",
+        url:"http://localhost:8080/api/Message/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -13,7 +13,7 @@ function autoInicioInformacionMessage(){
 
 function traerLlaveMessage(){
     $.ajax({
-        url:"http://129.151.102.93:8080/api/Message/all",
+        url:"http://localhost:8080/api/Message/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -61,7 +61,7 @@ function guardarInformacionMessage(){
         datatype: 'JSON',
         data:JSON.stringify(myData),
 
-        url:"http://129.151.102.93:8080/api/Message/save",
+        url:"http://localhost:8080/api/Message/save",
 
         success:function(respuesta){
             console.log(respuesta)
@@ -84,7 +84,7 @@ function actualizarInformacionMessage(idElemento){
     };
     console.log(myData);
     $.ajax({
-        url:"http://129.151.102.93:8080/api/Message/update",
+        url:"http://localhost:8080/api/Message/update",
         type:"PUT",
         data:JSON.stringify(myData),
         contentType:"application/json; charset=utf-8",
@@ -111,7 +111,7 @@ function borrarInformacionMessage(idElemento){
         idMessage:idElemento,
     };
     $.ajax({
-        url:"http://129.151.102.93:8080/api/Message/"+idElemento,
+        url:"http://localhost:8080/api/Message/"+idElemento,
         type:"DELETE",
         data:JSON.stringify(myData),
         contentType:"application/json; charset=utf-8",
